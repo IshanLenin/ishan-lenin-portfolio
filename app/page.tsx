@@ -41,6 +41,15 @@ const skills = {
   "Developer Tools & Platforms": ["Docker", "Nginx", "Git", "GitHub", "PostgreSQL", "DigitalOcean", "Postman", "VS Code"]
 };
 
+const leetcodeStats = {
+  solved: 130,
+  easy: 50,
+  medium: 72,
+  hard: 8,
+  profileUrl: "https://leetcode.com/u/Hachiman_08/"
+};
+
+
 // --- Main Component ---
 export default function Home() {
   return (
@@ -107,7 +116,6 @@ export default function Home() {
       <section id="about" className="py-24 px-8 bg-gray-900 bg-opacity-70">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-8">About Me</h2>
-          {/* CORRECTED: The quotes around "grind" are now escaped */}
           <p className="text-lg text-gray-300 leading-relaxed">
             I am a second-year Information Science and Technology student at Presidency University, driven by a passion for building robust, real-world applications. My journey is fueled by discipline, both in the gym where I train 6 days a week, and at the keyboard where I tackle complex engineering challenges. I thrive on the &ldquo;grind&rdquo; of turning a difficult idea into a deployed, functional product. My goal is to become a world-class engineer and eventually build my own products that make a real impact.
           </p>
@@ -118,7 +126,7 @@ export default function Home() {
       <section id="credentials" className="py-24 px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 text-center md:text-left">
-            {/* Skills */}
+            {/* Skills & Problem Solving */}
             <div>
               <h2 className="text-4xl font-bold mb-8">My Toolkit</h2>
               {Object.entries(skills).map(([category, items]) => (
@@ -133,6 +141,22 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+              {/* LeetCode Stats Card */}
+              <div className="mt-8">
+                <h3 className="text-xl font-semibold text-blue-400 mb-3">Competitive Programming</h3>
+                <a href={leetcodeStats.profileUrl} target="_blank" rel="noopener noreferrer" className="block p-4 bg-gray-800 bg-opacity-50 rounded-lg border border-gray-700 hover:border-green-500 transition-all">
+                  <div className="flex justify-between items-center">
+                    <p className="text-lg font-bold">LeetCode</p>
+                    <p className="text-lg font-bold text-green-400">{leetcodeStats.solved}+</p>
+                  </div>
+                  <p className="text-sm text-gray-400 mt-1">Systematically working through the Neetcode 150 roadmap.</p>
+                  <div className="flex justify-around mt-4 text-sm">
+                    <div className="text-center"><p className="font-bold text-gray-300">{leetcodeStats.easy}</p><p className="text-gray-500">Easy</p></div>
+                    <div className="text-center"><p className="font-bold text-gray-300">{leetcodeStats.medium}</p><p className="text-gray-500">Medium</p></div>
+                    <div className="text-center"><p className="font-bold text-gray-300">{leetcodeStats.hard}</p><p className="text-gray-500">Hard</p></div>
+                  </div>
+                </a>
+              </div>
             </div>
 
             {/* Education & Certs */}
