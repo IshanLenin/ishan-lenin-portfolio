@@ -44,9 +44,9 @@ const skills = {
 const leetcodeStats = {
   solved: 130,
   easy: 42,
-  medium: 78,
+  medium: 76,
   hard: 10,
-  profileUrl: "https://leetcode.com/u/Hachiman_08/"
+  profileUrl: "https://leetcode.com/u/IshanLenin/"
 };
 
 
