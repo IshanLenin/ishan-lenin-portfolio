@@ -1,6 +1,6 @@
-import Image from 'next/image';
+// The unused 'Image' import has been removed from the top
 
-// --- Project Data ---
+// --- Data ---
 const projects = [
   {
     title: "Session-Based Recommendation Engine",
@@ -14,7 +14,7 @@ const projects = [
     title: "Scalable News Analysis Engine",
     subtitle: "An Asynchronous AI-Powered Data Pipeline",
     description: "Designed a distributed system to scrape and analyze news articles, using Celery and Redis for asynchronous processing and a multi-database architecture.",
-    githubUrl: "https://github.com/IshanLenin/Social-Media-A", // Please update if this is incorrect
+    githubUrl: "https://github.com/IshanLenin/Social-Media-A",
     tech: ["Python", "FastAPI", "Celery", "Redis", "Docker Compose", "Vector DB"]
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     subtitle: "A Real-Time Generative AI Application",
     description: "Built a real-time, interactive storytelling game by chaining multiple AI models (Gemini for text, Stable Diffusion for images) via a FastAPI WebSocket backend.",
     liveUrl: "https://elysium.ishan-visionary.tech",
-    githubUrl: "https://github.com/IshanLenin/Project-Elysium", // Please create and update this repo
+    githubUrl: "https://github.com/IshanLenin/Project-Elysium",
     tech: ["Python", "FastAPI", "WebSockets", "Docker", "Generative AI"]
   },
   {
@@ -35,13 +35,20 @@ const projects = [
   }
 ];
 
+const skills = {
+  "Languages": ["Python", "SQL", "JavaScript", "HTML/CSS"],
+  "Frameworks & Libraries": ["FastAPI", "Pandas", "Gensim", "Pytest"],
+  "Developer Tools & Platforms": ["Docker", "Nginx", "Git", "GitHub", "PostgreSQL", "DigitalOcean", "Postman", "VS Code"]
+};
+
+// --- Main Component ---
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+    <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white font-sans">
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center min-h-screen p-8 text-center">
         <div className="space-y-4">
-          <h1 className="text-5xl md:text-7xl font-bold">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
             Ishan M Lenin
           </h1>
           <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto">
@@ -62,9 +69,9 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-8">
+      <section id="projects" className="py-24 px-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">My Work</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">My Work</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project) => (
               <div key={project.title} className="bg-gray-800 bg-opacity-50 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 flex flex-col">
@@ -97,15 +104,58 @@ export default function Home() {
       </section>
 
       {/* About Me Section */}
-      <section id="about" className="py-20 px-8 bg-gray-900 bg-opacity-50">
+      <section id="about" className="py-24 px-8 bg-gray-900 bg-opacity-70">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-8">About Me</h2>
+          {/* CORRECTED: The quotes around "grind" are now escaped */}
           <p className="text-lg text-gray-300 leading-relaxed">
-            I am a second-year Information Science and Technology student at Presidency University, driven by a passion for building robust, real-world applications. My journey is fueled by discipline, both in the gym where I train 6 days a week, and at the keyboard where I tackle complex engineering challenges. I thrive on the "grind" of turning a difficult idea into a deployed, functional product. My goal is to become a world-class engineer and eventually build my own products that make a real impact.
+            I am a second-year Information Science and Technology student at Presidency University, driven by a passion for building robust, real-world applications. My journey is fueled by discipline, both in the gym where I train 6 days a week, and at the keyboard where I tackle complex engineering challenges. I thrive on the &ldquo;grind&rdquo; of turning a difficult idea into a deployed, functional product. My goal is to become a world-class engineer and eventually build my own products that make a real impact.
           </p>
         </div>
       </section>
 
+      {/* Skills & Education Section */}
+      <section id="credentials" className="py-24 px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 text-center md:text-left">
+            {/* Skills */}
+            <div>
+              <h2 className="text-4xl font-bold mb-8">My Toolkit</h2>
+              {Object.entries(skills).map(([category, items]) => (
+                <div key={category} className="mb-6">
+                  <h3 className="text-xl font-semibold text-blue-400 mb-3">{category}</h3>
+                  <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                    {items.map((skill) => (
+                      <span key={skill} className="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Education & Certs */}
+            <div>
+              <h2 className="text-4xl font-bold mb-8">Education & Certs</h2>
+              <div className="mb-6">
+                 <h3 className="text-xl font-semibold text-blue-400 mb-2">Presidency University, Bengaluru</h3>
+                 <p className="text-gray-400">B.Tech in Information Science and Technology</p>
+                 <p className="text-gray-500 text-sm">Expected Graduation: May 2028 | CGPA: 8.0/10.0</p>
+              </div>
+              <div>
+                 <h3 className="text-xl font-semibold text-blue-400 mt-8 mb-2">Certifications</h3>
+                 <ul className="space-y-2 text-gray-400">
+                    <li><a href="https://courses.edx.org/certificates/dbdf9b17c03d4f20a2402557d1a7e182" target="_blank" rel="noopener noreferrer" className="hover:text-white">CS50's Introduction to Artificial Intelligence - HarvardX</a></li>
+                    <li><a href="https://courses.edx.org/certificates/e7f58417285f4f64ac5a1309a921c5d8" target="_blank" rel="noopener noreferrer" className="hover:text-white">CS109x: Data Science - HarvardX</a></li>
+                    <li><a href="https://media.licdn.com/dms/image/v2/D4E22AQFx4TkUHPqJAw/feedshare-shrink_1280/0/1747761972793?e=1761782400&v=beta&t=xiUtHsMsB-C8HP5FK5JG0vMaq2DJlQTvEBRYumNW3g4" target="_blank" rel="noopener noreferrer" className="hover:text-white">The Joy of Computing using Python - NPTEL</a></li>
+                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Footer */}
       <footer className="text-center py-8 px-4 border-t border-gray-800">
         <div className="max-w-6xl mx-auto">
