@@ -43,9 +43,9 @@ const skills = {
 
 const leetcodeStats = {
   solved: 130,
-  easy: 50,
-  medium: 72,
-  hard: 8,
+  easy: 42,
+  medium: 78,
+  hard: 10,
   profileUrl: "https://leetcode.com/u/Hachiman_08/"
 };
 
