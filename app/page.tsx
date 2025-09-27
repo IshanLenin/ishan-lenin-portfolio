@@ -1,5 +1,3 @@
-// The unused 'Image' import has been removed from the top
-
 // --- Data ---
 const projects = [
   {
@@ -43,10 +41,10 @@ const skills = {
 
 const leetcodeStats = {
   solved: 130,
-  easy: 42,
-  medium: 76,
-  hard: 10,
-  profileUrl: "https://leetcode.com/u/IshanLenin/"
+  easy: 50,
+  medium: 72,
+  hard: 8,
+  profileUrl: "https://leetcode.com/u/Hachiman_08/"
 };
 
 
@@ -161,7 +159,7 @@ export default function Home() {
 
             {/* Education & Certs */}
             <div>
-              <h2 className="text-4xl font-bold mb-8">Education & Certifications</h2>
+              <h2 className="text-4xl font-bold mb-8">Education & Certs</h2>
               <div className="mb-6">
                  <h3 className="text-xl font-semibold text-blue-400 mb-2">Presidency University, Bengaluru</h3>
                  <p className="text-gray-400">B.Tech in Information Science and Technology</p>
@@ -170,7 +168,7 @@ export default function Home() {
               <div>
                  <h3 className="text-xl font-semibold text-blue-400 mt-8 mb-2">Certifications</h3>
                  <ul className="space-y-2 text-gray-400">
-                    <li><a href="https://courses.edx.org/certificates/dbdf9b17c03d4f20a2402557d1a7e182" target="_blank" rel="noopener noreferrer" className="hover:text-white">CS50's Introduction to Artificial Intelligence - HarvardX</a></li>
+                    <li><a href="https://courses.edx.org/certificates/dbdf9b17c03d4f20a2402557d1a7e182" target="_blank" rel="noopener noreferrer" className="hover:text-white">CS50&apos;s Introduction to Artificial Intelligence - HarvardX</a></li>
                     <li><a href="https://courses.edx.org/certificates/e7f58417285f4f64ac5a1309a921c5d8" target="_blank" rel="noopener noreferrer" className="hover:text-white">CS109x: Data Science - HarvardX</a></li>
                     <li><a href="https://media.licdn.com/dms/image/v2/D4E22AQFx4TkUHPqJAw/feedshare-shrink_1280/0/1747761972793?e=1761782400&v=beta&t=xiUtHsMsB-C8HP5FK5JG0vMaq2DJlQTvEBRYumNW3g4" target="_blank" rel="noopener noreferrer" className="hover:text-white">The Joy of Computing using Python - NPTEL</a></li>
                  </ul>
