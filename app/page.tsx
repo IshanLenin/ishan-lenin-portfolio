@@ -161,7 +161,7 @@ export default function Home() {
 
             {/* Education & Certs */}
             <div>
-              <h2 className="text-4xl font-bold mb-8">Education & Certs</h2>
+              <h2 className="text-4xl font-bold mb-8">Education & Certifications</h2>
               <div className="mb-6">
                  <h3 className="text-xl font-semibold text-blue-400 mb-2">Presidency University, Bengaluru</h3>
                  <p className="text-gray-400">B.Tech in Information Science and Technology</p>
