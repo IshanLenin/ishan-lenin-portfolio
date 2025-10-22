@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import Link from 'next/link'; // Import Link for navigation if needed
+// Removed unused Image and Link imports
 
 // --- Data ---
 const projects = [
@@ -12,7 +11,7 @@ const projects = [
     githubUrl: "https://github.com/IshanLenin/Image-analyzer",
     tech: ["AWS (VPC, EC2, SG, NACL, IGW, NAT)", "Nginx", "Docker", "FastAPI", "Linux"],
     // Optional: Add path to your architecture diagram if you want to display it
-    // diagramUrl: "/aws_architecture.png" 
+    // diagramUrl: "/aws_architecture.png"
   },
   // --- Existing Projects ---
   {
@@ -58,7 +57,7 @@ export default function Home() {
       <section className="flex flex-col items-center justify-center min-h-screen p-8 text-center relative overflow-hidden">
         {/* Subtle background pattern or animation can go here */}
         <div className="absolute inset-0 bg-black opacity-30 z-0"></div> {/* Optional overlay */}
-        
+
         <div className="relative z-10 space-y-6 max-w-4xl mx-auto"> {/* Increased max-width */}
            {/* Optional: Add a subtle animation */}
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-gradient-x">
@@ -95,7 +94,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">About Me</h2>
           <p className="text-lg text-gray-300 leading-relaxed">
-            I am a second-year Information Science and Technology student at Presidency University, driven by a deep passion for architecting and building robust, real-world applications. My journey is fueled by discipline – honed through 6 days a week of fitness training and countless hours tackling complex engineering challenges. I thrive on the "grind" of turning a difficult idea into a deployed, functional, and scalable product. My goal is to become a world-class engineer, contribute meaningfully to challenging projects, and eventually build my own products that make a real impact.
+            I am a second-year Information Science and Technology student at Presidency University, driven by a deep passion for architecting and building robust, real-world applications. My journey is fueled by discipline – honed through 6 days a week of fitness training and countless hours tackling complex engineering challenges. I thrive on the &ldquo;grind&rdquo; of turning a difficult idea into a deployed, functional, and scalable product. My goal is to become a world-class engineer, contribute meaningfully to challenging projects, and eventually build my own products that make a real impact.
           </p>
         </div>
       </section>
@@ -172,7 +171,7 @@ export default function Home() {
                   {/* Using standard list items for better accessibility */}
                   <li className="flex items-center">
                     <svg className="w-4 h-4 mr-2 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.469 6.469a.75.75 0 01.011 1.05l-3.25 3.5a.75.75 0 01-1.062.011l-1.75-1.75a.75.75 0 111.05-1.072l1.22 1.22 2.72-2.95a.75.75 0 011.05-.011z" clipRule="evenodd"></path></svg>
-                    <a href="https://courses.edx.org/certificates/dbdf9b17c03d4f20a2402557d1a7e182" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 underline underline-offset-2 decoration-dotted hover:decoration-solid">CS50's Introduction to Artificial Intelligence <span className="text-gray-500 text-sm">(HarvardX)</span></a>
+                    <a href="https://courses.edx.org/certificates/dbdf9b17c03d4f20a2402557d1a7e182" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 underline underline-offset-2 decoration-dotted hover:decoration-solid">CS50&apos;s Introduction to Artificial Intelligence <span className="text-gray-500 text-sm">(HarvardX)</span></a>
                   </li>
                    <li className="flex items-center">
                      <svg className="w-4 h-4 mr-2 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.469 6.469a.75.75 0 01.011 1.05l-3.25 3.5a.75.75 0 01-1.062.011l-1.75-1.75a.75.75 0 111.05-1.072l1.22 1.22 2.72-2.95a.75.75 0 011.05-.011z" clipRule="evenodd"></path></svg>
@@ -193,7 +192,7 @@ export default function Home() {
       <footer className="text-center py-10 px-4 border-t border-gray-800 mt-16"> {/* Increased padding/margin */}
         <div className="max-w-6xl mx-auto">
            <p className="text-gray-400 mb-4"> {/* Increased brightness */}
-            Let's connect! Always open to discussing tech, fitness, or new opportunities.
+            Let&apos;s connect! Always open to discussing tech, fitness, or new opportunities.
           </p>
           <div className="flex justify-center space-x-6 mb-6">
              {/* Re-using links from header for consistency */}
@@ -229,7 +228,7 @@ const styles = `
 `;
 
 // Inject styles (or use Tailwind's arbitrary variants/plugins for cleaner integration)
-// Note: Injecting styles like this is generally discouraged in Next.js/React, 
+// Note: Injecting styles like this is generally discouraged in Next.js/React,
 // prefer CSS Modules or Tailwind config extensions for production apps.
 if (typeof window !== 'undefined') {
   const styleSheet = document.createElement("style");
