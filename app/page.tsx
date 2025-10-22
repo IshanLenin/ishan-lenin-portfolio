@@ -67,9 +67,6 @@ export default function Home() {
             Second-Year Engineering Student | Building Scalable, AI-Powered Systems & Cloud Infrastructure.
           </p>
           <div className="flex justify-center space-x-6 pt-4">
-            <a href="https://ishanlenin.me" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-lg"> {/* Increased size */}
-              Portfolio
-            </a>
             <a href="https://github.com/IshanLenin" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-100 transition-colors duration-300 text-lg">
               GitHub
             </a>
